@@ -91,11 +91,11 @@ Connection ~ 1700 900
 Wire Wire Line
 	1700 900  700  900 
 $Comp
-L 74xx:74HC596 U2
+L 74xx:74HC595 U2
 U 1 1 5E43099D
 P 5450 1950
 F 0 "U2" V 5450 1950 50  0000 C CNN
-F 1 "74HC596" V 5550 1950 50  0000 C CNN
+F 1 "74HC595" V 5550 1950 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 5450 1950 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf" H 5450 1950 50  0001 C CNN
 	1    5450 1950
@@ -843,11 +843,11 @@ Wire Wire Line
 	5050 2650 5450 2650
 Connection ~ 5450 2650
 $Comp
-L 74xx:74HC596 U3
+L 74xx:74HC595 U3
 U 1 1 5E44C9F4
 P 6250 3150
 F 0 "U3" V 6250 3150 50  0000 C CNN
-F 1 "74HC596" V 6350 3150 50  0000 C CNN
+F 1 "74HC595" V 6350 3150 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 6250 3150 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf" H 6250 3150 50  0001 C CNN
 	1    6250 3150
@@ -855,11 +855,11 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf" H 6250 31
 $EndComp
 Connection ~ 6250 3850
 $Comp
-L 74xx:74HC596 U4
+L 74xx:74HC595 U4
 U 1 1 5E44CAA4
 P 7050 4350
 F 0 "U4" V 7050 4350 50  0000 C CNN
-F 1 "74HC596" V 7150 4350 50  0000 C CNN
+F 1 "74HC595" V 7150 4350 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 7050 4350 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf" H 7050 4350 50  0001 C CNN
 	1    7050 4350
@@ -867,11 +867,11 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf" H 7050 43
 $EndComp
 Connection ~ 7050 5050
 $Comp
-L 74xx:74HC596 U5
+L 74xx:74HC595 U5
 U 1 1 5E44CB56
 P 7850 5550
 F 0 "U5" V 7850 5550 50  0000 C CNN
-F 1 "74HC596" V 7950 5550 50  0000 C CNN
+F 1 "74HC595" V 7950 5550 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 7850 5550 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf" H 7850 5550 50  0001 C CNN
 	1    7850 5550
@@ -1089,7 +1089,7 @@ U 1 1 5E4F41B6
 P 2200 900
 F 0 "U1" H 2200 658 50  0000 C CNN
 F 1 "MCP1700-3302E_TO92" H 2200 749 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2200 700 50  0001 C CIN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_W4.0mm_Horizontal_FlatSideDown" H 2200 700 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 2200 900 50  0001 C CNN
 	1    2200 900 
 	1    0    0    1   
@@ -1444,7 +1444,7 @@ U 1 1 5E44F96C
 P 2350 1800
 F 0 "C3" H 2442 1846 50  0000 L CNN
 F 1 "100n" H 2442 1755 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2350 1800 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2350 1800 50  0001 C CNN
 F 3 "~" H 2350 1800 50  0001 C CNN
 	1    2350 1800
 	1    0    0    -1  
