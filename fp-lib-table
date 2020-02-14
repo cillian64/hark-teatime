@@ -1,2 +1,3 @@
 (fp_lib_table
+  (lib (name teatime)(type KiCad)(uri ${KIPRJMOD}/teatime.pretty)(options "")(descr ""))
 )
