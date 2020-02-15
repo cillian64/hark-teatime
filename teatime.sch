@@ -1030,7 +1030,7 @@ L Device:R_Small R33
 U 1 1 5E4A8319
 P 3700 3000
 F 0 "R33" H 3641 2954 50  0000 R CNN
-F 1 "100k" V 3700 3000 30  0000 C CNN
+F 1 "10k" V 3700 3000 30  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 3700 3000 50  0001 C CNN
 F 3 "~" H 3700 3000 50  0001 C CNN
 	1    3700 3000
@@ -1048,20 +1048,20 @@ F 3 "" H 3700 2900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 2800 3450 2800
+	3300 2800 3500 2800
 Wire Wire Line
-	3450 2800 3450 3100
+	3600 2800 3600 3100
 Wire Wire Line
-	3450 3100 3700 3100
+	3600 3100 3700 3100
 Connection ~ 3700 3100
 Wire Wire Line
-	3300 2400 4300 2400
+	3300 2400 3350 2400
 $Comp
 L Regulator_Linear:MCP1700-3302E_TO92 U1
 U 1 1 5E4F41B6
 P 2200 900
 F 0 "U1" H 2200 658 50  0000 C CNN
-F 1 "MCP1700-3302E_TO92" H 2200 749 50  0000 C CNN
+F 1 "MCP1700-3302E" H 2200 749 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline_W4.0mm_Horizontal_FlatSideDown" H 2200 700 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 2200 900 50  0001 C CNN
 	1    2200 900 
@@ -1069,7 +1069,6 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826D.pdf" H 2200 900 5
 $EndComp
 Connection ~ 2200 1200
 NoConn ~ 3300 2600
-NoConn ~ 3300 2700
 $Comp
 L Device:R_Small R2
 U 1 1 5E52940A
@@ -1483,11 +1482,11 @@ Connection ~ 4350 2300
 Wire Wire Line
 	4350 2300 4350 3250
 Wire Wire Line
-	3300 2300 4350 2300
+	3300 2300 3400 2300
 Wire Wire Line
 	4250 1550 4250 2500
 Wire Wire Line
-	4250 2500 3300 2500
+	4250 2500 3450 2500
 Wire Wire Line
 	9050 1200 9400 1200
 Wire Wire Line
@@ -1597,4 +1596,147 @@ F 3 "~" H 700 1200 50  0001 C CNN
 $EndComp
 Connection ~ 700  900 
 Connection ~ 700  1200
+$Comp
+L Connector:AVR-ISP-6 J1
+U 1 1 5E4866F5
+P 2800 4300
+F 0 "J1" H 2520 4396 50  0000 R CNN
+F 1 "PROG" H 2520 4305 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 2550 4350 50  0001 C CNN
+F 3 " ~" H 1525 3750 50  0001 C CNN
+	1    2800 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5E4868CF
+P 2700 3800
+F 0 "#PWR0101" H 2700 3650 50  0001 C CNN
+F 1 "+3V3" H 2715 3973 50  0000 C CNN
+F 2 "" H 2700 3800 50  0001 C CNN
+F 3 "" H 2700 3800 50  0001 C CNN
+	1    2700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5E486986
+P 2700 4700
+F 0 "#PWR0102" H 2700 4450 50  0001 C CNN
+F 1 "GND" H 2705 4527 50  0000 C CNN
+F 2 "" H 2700 4700 50  0001 C CNN
+F 3 "" H 2700 4700 50  0001 C CNN
+	1    2700 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 4100 3350 4100
+Wire Wire Line
+	3200 4200 3400 4200
+Wire Wire Line
+	3200 4300 3450 4300
+Wire Wire Line
+	3200 4400 3500 4400
+Wire Wire Line
+	3500 4400 3500 2800
+Connection ~ 3500 2800
+Wire Wire Line
+	3500 2800 3600 2800
+Wire Wire Line
+	3450 2500 3450 4300
+Connection ~ 3450 2500
+Wire Wire Line
+	3450 2500 3300 2500
+Wire Wire Line
+	3400 2300 3400 4200
+Connection ~ 3400 2300
+Wire Wire Line
+	3400 2300 4350 2300
+Wire Wire Line
+	3350 2400 3350 4100
+Connection ~ 3350 2400
+Wire Wire Line
+	3350 2400 4300 2400
+$Comp
+L Device:Speaker LS1
+U 1 1 5E4D2D09
+P 4650 6100
+F 0 "LS1" H 4820 6096 50  0000 L CNN
+F 1 "Speaker" H 4820 6005 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" H 4650 5900 50  0001 C CNN
+F 3 "~" H 4640 6050 50  0001 C CNN
+	1    4650 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q1
+U 1 1 5E4D2E2E
+P 4100 6450
+F 0 "Q1" H 4305 6496 50  0000 L CNN
+F 1 "2N7000" H 4305 6405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_W4.0mm_Horizontal_FlatSideDown" H 4300 6375 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 4100 6450 50  0001 L CNN
+	1    4100 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R34
+U 1 1 5E4D2F24
+P 4200 6150
+F 0 "R34" H 4141 6104 50  0000 R CNN
+F 1 "10k" V 4200 6150 30  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 4200 6150 50  0001 C CNN
+F 3 "~" H 4200 6150 50  0001 C CNN
+	1    4200 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R35
+U 1 1 5E4D313D
+P 3800 6450
+F 0 "R35" H 3741 6404 50  0000 R CNN
+F 1 "10k" V 3800 6450 30  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 3800 6450 50  0001 C CNN
+F 3 "~" H 3800 6450 50  0001 C CNN
+	1    3800 6450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3300 2700 3550 2700
+$Comp
+L power:+3V3 #PWR021
+U 1 1 5E4E5E02
+P 4200 6050
+F 0 "#PWR021" H 4200 5900 50  0001 C CNN
+F 1 "+3V3" H 4215 6223 50  0000 C CNN
+F 2 "" H 4200 6050 50  0001 C CNN
+F 3 "" H 4200 6050 50  0001 C CNN
+	1    4200 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 6100 4450 6050
+Wire Wire Line
+	4450 6050 4200 6050
+Wire Wire Line
+	4450 6200 4450 6250
+Wire Wire Line
+	4450 6250 4200 6250
+Connection ~ 4200 6250
+Connection ~ 4200 6050
+$Comp
+L power:GND #PWR022
+U 1 1 5E502CAC
+P 4200 6650
+F 0 "#PWR022" H 4200 6400 50  0001 C CNN
+F 1 "GND" H 4205 6477 50  0000 C CNN
+F 2 "" H 4200 6650 50  0001 C CNN
+F 3 "" H 4200 6650 50  0001 C CNN
+	1    4200 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 6450 3700 6450
+Wire Wire Line
+	3550 2700 3550 6450
 $EndSCHEMATC
