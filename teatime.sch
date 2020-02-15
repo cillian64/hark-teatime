@@ -42,20 +42,10 @@ U 1 1 5E46AC3F
 P 1700 1000
 F 0 "C1" H 1792 1046 50  0000 L CNN
 F 1 "1u" H 1792 955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 1700 1000 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02" H 1700 1000 50  0001 C CNN
 F 3 "~" H 1700 1000 50  0001 C CNN
+F 4 "2544872" H 1700 1000 50  0001 C CNN "Farnell"
 	1    1700 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C2
-U 1 1 5E46AD91
-P 2700 1000
-F 0 "C2" H 2792 1046 50  0000 L CNN
-F 1 "1u" H 2792 955 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 2700 1000 50  0001 C CNN
-F 3 "~" H 2700 1000 50  0001 C CNN
-	1    2700 1000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -80,11 +70,6 @@ Wire Wire Line
 Wire Wire Line
 	2200 1200 2200 1250
 Connection ~ 2200 1250
-Wire Wire Line
-	2700 900  2500 900 
-Wire Wire Line
-	2950 900  2700 900 
-Connection ~ 2700 900 
 Wire Wire Line
 	1900 900  1700 900 
 Connection ~ 1700 900 
@@ -986,7 +971,7 @@ F 3 "~" H 6300 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Microchip_ATtiny:ATtiny85-20PU U6
+L teatime-rescue:ATtiny85-20PU-MCU_Microchip_ATtiny U6
 U 1 1 5E4A18E1
 P 2700 2600
 F 0 "U6" H 2171 2646 50  0000 R CNN
@@ -1024,7 +1009,7 @@ U 1 1 5E4A6F02
 P 3700 3300
 F 0 "SW1" V 3654 3448 50  0000 L CNN
 F 1 "SW_Push" V 3745 3448 50  0000 L CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm" H 3700 3500 50  0001 C CNN
+F 2 "teatime:B3F-40xx" H 3700 3500 50  0001 C CNN
 F 3 "~" H 3700 3500 50  0001 C CNN
 	1    3700 3300
 	0    1    1    0   
@@ -1070,18 +1055,7 @@ Wire Wire Line
 	3450 3100 3700 3100
 Connection ~ 3700 3100
 Wire Wire Line
-	4350 2050 4350 2500
-Wire Wire Line
 	3300 2400 4300 2400
-Wire Wire Line
-	3300 2500 4350 2500
-Connection ~ 4350 2500
-Wire Wire Line
-	4350 2500 4350 3250
-Wire Wire Line
-	4250 1550 4250 2300
-Wire Wire Line
-	4250 2300 3300 2300
 $Comp
 L Regulator_Linear:MCP1700-3302E_TO92 U1
 U 1 1 5E4F41B6
@@ -1443,8 +1417,9 @@ U 1 1 5E44F96C
 P 2350 1800
 F 0 "C3" H 2442 1846 50  0000 L CNN
 F 1 "100n" H 2442 1755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 2350 1800 50  0001 C CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 2350 1800 50  0001 C CNN
 F 3 "~" H 2350 1800 50  0001 C CNN
+F 4 "1141775" H 2350 1800 50  0001 C CNN "Farnell"
 	1    2350 1800
 	1    0    0    -1  
 $EndComp
@@ -1465,17 +1440,6 @@ Wire Wire Line
 	2700 1700 2700 2000
 Connection ~ 2700 1700
 $Comp
-L Device:C_Small C4
-U 1 1 5E479313
-P 9050 1300
-F 0 "C4" H 9142 1346 50  0000 L CNN
-F 1 "100n" H 9142 1255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 9050 1300 50  0001 C CNN
-F 3 "~" H 9050 1300 50  0001 C CNN
-	1    9050 1300
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR020
 U 1 1 5E479439
 P 9600 1400
@@ -1487,50 +1451,7 @@ F 3 "" H 9600 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5450 1350
-$Comp
-L Device:C_Small C5
-U 1 1 5E48E2A0
-P 9400 1300
-F 0 "C5" H 9492 1346 50  0000 L CNN
-F 1 "100n" H 9492 1255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 9400 1300 50  0001 C CNN
-F 3 "~" H 9400 1300 50  0001 C CNN
-	1    9400 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C6
-U 1 1 5E48E35E
-P 9750 1300
-F 0 "C6" H 9842 1346 50  0000 L CNN
-F 1 "100n" H 9842 1255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 9750 1300 50  0001 C CNN
-F 3 "~" H 9750 1300 50  0001 C CNN
-	1    9750 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C7
-U 1 1 5E48E422
-P 10100 1300
-F 0 "C7" H 10192 1346 50  0000 L CNN
-F 1 "100n" H 10192 1255 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric" H 10100 1300 50  0001 C CNN
-F 3 "~" H 10100 1300 50  0001 C CNN
-	1    10100 1300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9050 1400 9400 1400
-Connection ~ 9400 1400
-Wire Wire Line
-	9400 1400 9600 1400
 Connection ~ 9600 1400
-Wire Wire Line
-	9600 1400 9750 1400
-Connection ~ 9750 1400
-Wire Wire Line
-	9750 1400 10100 1400
 $Comp
 L power:+3V3 #PWR019
 U 1 1 5E4952DF
@@ -1542,17 +1463,7 @@ F 3 "" H 9600 1200 50  0001 C CNN
 	1    9600 1200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9050 1200 9400 1200
-Connection ~ 9400 1200
-Wire Wire Line
-	9400 1200 9600 1200
 Connection ~ 9600 1200
-Wire Wire Line
-	9600 1200 9750 1200
-Connection ~ 9750 1200
-Wire Wire Line
-	9750 1200 10100 1200
 Text Notes 9200 1700 0    50   ~ 0
 74hc595 Decoupling
 $Comp
@@ -1566,4 +1477,124 @@ F 3 "" H 5512 7250 50  0001 C CNN
 	1    5500 7250
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4350 2050 4350 2300
+Connection ~ 4350 2300
+Wire Wire Line
+	4350 2300 4350 3250
+Wire Wire Line
+	3300 2300 4350 2300
+Wire Wire Line
+	4250 1550 4250 2500
+Wire Wire Line
+	4250 2500 3300 2500
+Wire Wire Line
+	9050 1200 9400 1200
+Wire Wire Line
+	9050 1400 9400 1400
+Wire Wire Line
+	9600 1200 9750 1200
+Wire Wire Line
+	9600 1400 9750 1400
+$Comp
+L Device:C_Small C4
+U 1 1 5E494EEA
+P 9050 1300
+F 0 "C4" H 9142 1346 50  0000 L CNN
+F 1 "100n" H 9142 1255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 9050 1300 50  0001 C CNN
+F 3 "~" H 9050 1300 50  0001 C CNN
+F 4 "1141775" H 9050 1300 50  0001 C CNN "Farnell"
+	1    9050 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5E495028
+P 9400 1300
+F 0 "C5" H 9492 1346 50  0000 L CNN
+F 1 "100n" H 9492 1255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 9400 1300 50  0001 C CNN
+F 3 "~" H 9400 1300 50  0001 C CNN
+F 4 "1141775" H 9400 1300 50  0001 C CNN "Farnell"
+	1    9400 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 9400 1200
+Wire Wire Line
+	9400 1200 9600 1200
+Connection ~ 9400 1400
+Wire Wire Line
+	9400 1400 9600 1400
+$Comp
+L Device:C_Small C6
+U 1 1 5E4950EE
+P 9750 1300
+F 0 "C6" H 9842 1346 50  0000 L CNN
+F 1 "100n" H 9842 1255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 9750 1300 50  0001 C CNN
+F 3 "~" H 9750 1300 50  0001 C CNN
+F 4 "1141775" H 9750 1300 50  0001 C CNN "Farnell"
+	1    9750 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 9750 1200
+Wire Wire Line
+	9750 1200 10100 1200
+Connection ~ 9750 1400
+Wire Wire Line
+	9750 1400 10100 1400
+$Comp
+L Device:C_Small C7
+U 1 1 5E4951B6
+P 10100 1300
+F 0 "C7" H 10192 1346 50  0000 L CNN
+F 1 "100n" H 10192 1255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 10100 1300 50  0001 C CNN
+F 3 "~" H 10100 1300 50  0001 C CNN
+F 4 "1141775" H 10100 1300 50  0001 C CNN "Farnell"
+	1    10100 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 900  2700 900 
+$Comp
+L Device:C_Small C2
+U 1 1 5E4953EA
+P 2700 1000
+F 0 "C2" H 2792 1046 50  0000 L CNN
+F 1 "1u" H 2792 955 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.6mm_W3.0mm_P2.50mm_MKS02_FKP02" H 2700 1000 50  0001 C CNN
+F 3 "~" H 2700 1000 50  0001 C CNN
+F 4 "2544872" H 2700 1000 50  0001 C CNN "Farnell"
+	1    2700 1000
+	1    0    0    -1  
+$EndComp
+Connection ~ 2700 900 
+Wire Wire Line
+	2700 900  2950 900 
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E4A085B
+P 700 900
+F 0 "#FLG0101" H 700 975 50  0001 C CNN
+F 1 "PWR_FLAG" H 700 1074 50  0001 C CNN
+F 2 "" H 700 900 50  0001 C CNN
+F 3 "~" H 700 900 50  0001 C CNN
+	1    700  900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E4A0917
+P 700 1200
+F 0 "#FLG0102" H 700 1275 50  0001 C CNN
+F 1 "PWR_FLAG" V 700 1328 50  0001 L CNN
+F 2 "" H 700 1200 50  0001 C CNN
+F 3 "~" H 700 1200 50  0001 C CNN
+	1    700  1200
+	0    -1   -1   0   
+$EndComp
+Connection ~ 700  900 
+Connection ~ 700  1200
 $EndSCHEMATC
