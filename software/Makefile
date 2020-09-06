@@ -1,5 +1,5 @@
 CPPFLAGS=-I.
-MCU=attiny45
+MCU=attiny85
 all: main.hex
 
 main.elf: main.o 
