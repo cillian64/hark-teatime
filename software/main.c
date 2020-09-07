@@ -22,44 +22,21 @@ inline void setup_pins(void) {
 }
 
 inline void display(char sec, char block) {
-    char init_off;
-    char mid_off;
     char i;
 
-    if(sec < 2) {
-        init_off = 0;
-    } else {
-        init_off = sec - 1;
-    }
-
-    if(sec > 0 && sec <= (32 - block)) {
-        mid_off = 32 - block - init_off - 1;
-    } else {
-        mid_off = 32 - block;
-    }
-
     OFF(RCLK);
-    if(sec > 0 && sec <= (32 - block)){
-        for(i = 0; i < init_off; i++){
-            OFF(SCLK);
+    for(i = 0; i < 32; i++){
+        OFF(SCLK);
+        if(i == sec || (32-block) <= i) {
+            OFF(SER);
+        } else {
             ON(SER);
-            ON(SCLK);
         }
-        OFF(SCLK);
-        OFF(SER);
-        ON(SCLK);
-    }
-    for(i = 0; i < mid_off; i++){
-        OFF(SCLK);
-        ON(SER);
-        ON(SCLK);
-    }
-    for(i = 0; i < block; i++){
-        OFF(SCLK);
-        OFF(SER);
         ON(SCLK);
     }
     ON(RCLK);
+    OFF(SCLK);
+    OFF(RCLK);
 }
 
 inline void sleep_forever() {
@@ -93,7 +70,7 @@ int main(void) {
     while(1) {
         for(total = 0; total < 32; total++) {
             for(inner = 0; inner < 10; inner++) {
-                for(i = 1; i < 33; i++) {
+                for(i = 0; i < 32; i++) {
                     display(i, total);
                     _delay_ms(31);
                 }
@@ -101,9 +78,9 @@ int main(void) {
             }
         }
         for(i = 0; i < 5; i++) {
-            display(0,32);
+            display(-1,32);
             buzz500ms();
-            display(0,0);
+            display(-1,0);
             _delay_ms(500);
         }
         sleep_forever();
