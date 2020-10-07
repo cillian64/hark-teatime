@@ -60,21 +60,29 @@ static inline void buzz500ms() {
     }
 }
 
+void arg_delay_ms(int n) {
+    while(n--) {
+        _delay_ms(1);
+    }
+}
+
 int main(void) {
     char total;
     char inner;
     char i;
+    int step_delay[32] = {30, 31, 32, 33, 34, 35, 37, 38, 40, 41, 43, 45, 47, 50, 52, 55, 58, 62, 66, 71, 76, 83, 90, 100, 111, 125, 142, 166, 200, 250, 333, 500};
+    char step_post[32] = {10, 8, 8, 10, 14, 20, 1, 12, 0, 16, 11, 10, 13, 0, 12, 10, 14, 8, 10, 6, 12, 4, 10, 0, 1, 0, 6, 4, 0, 0, 1, 0};
     
     setup_pins();
 
     while(1) {
         for(total = 0; total < 32; total++) {
             for(inner = 0; inner < 10; inner++) {
-                for(i = 0; i < 32; i++) {
+                arg_delay_ms(step_post[total]);   
+                for(i = -1; i < (32-total); i++) {
                     display(i, total);
-                    _delay_ms(31);
+                    arg_delay_ms(step_delay[total]);
                 }
-                _delay_ms(8);   
             }
         }
         for(i = 0; i < 5; i++) {
