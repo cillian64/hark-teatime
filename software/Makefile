@@ -1,5 +1,5 @@
 CPPFLAGS=-I.
-MCU=attiny85
+MCU=attiny45
 all: main.hex
 
 main.elf: main.o 
@@ -21,9 +21,9 @@ clean:
 
 
 program: main.hex
-	avrdude -p t45 -P /dev/ttyUSB0 -c avrusb500 -e -U flash:w:$^
+	./avrdude.exe -p t45 -c usbtiny -e -U flash:w:$^
 
 fuses:
-	avrdude -p t45 -P /dev/ttyUSB0 -c avrusb500 -e -U lfuse:w:0xA2:m
-	avrdude -p t45 -P /dev/ttyUSB0 -c avrusb500 -e -U hfuse:w:0xDF:m
+	./avrdude.exe -p t45 -c usbtiny -e -U lfuse:w:0xA2:m
+	./avrdude.exe -p t45 -c usbtiny -e -U hfuse:w:0xDF:m
 
